@@ -60,11 +60,11 @@ public class HomeController {
         String userName = authentication.getName();
         User user = userService.getUser(userName);
         Integer userId = user.getUserID();
-        List<Files> fileListings = fileService.getAllFile(userId);
+        String[] fileListings = fileService.getAllFile(userId);
         MultipartFile multipartFile = newFile.getFile();
         String fileName = multipartFile.getOriginalFilename();
         boolean fileIsDuplicate = false;
-        for (Files file: fileListings) {
+        for (String file: fileListings) {
             if (file.equals(fileName)) {
                 fileIsDuplicate = true;
                 break;

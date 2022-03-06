@@ -39,7 +39,7 @@ public class NoteService {
         notesMapper.delete(noteId);
     }
     public void updateNote(String noteTitle, String noteDescription, Integer noteId){
-        notesMapper.updateNote(noteTitle, noteDescription, noteId);
+        notesMapper.updateNote(noteId, noteTitle, noteDescription);
 
     }
 

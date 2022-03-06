@@ -1,6 +1,7 @@
 package Fredrick.Li.Personal.Cloud.Storage.service;
 
 import Fredrick.Li.Personal.Cloud.Storage.mapper.CredentialsMapper;
+import Fredrick.Li.Personal.Cloud.Storage.mapper.UserMapper;
 import Fredrick.Li.Personal.Cloud.Storage.model.Credentials;
 import Fredrick.Li.Personal.Cloud.Storage.model.NoteForm;
 import Fredrick.Li.Personal.Cloud.Storage.model.Notes;
@@ -12,11 +13,11 @@ import java.util.List;
 @Service
 public class CredentialService {
     private final CredentialsMapper credentialsMapper;
-    private final UserService userService;
+    private final UserMapper userMapper;
 
-    public CredentialService(CredentialsMapper credentialsMapper, UserService userService){
+    public CredentialService(CredentialsMapper credentialsMapper, UserMapper userMapper){
         this.credentialsMapper = credentialsMapper;
-        this.userService = userService;
+        this.userMapper = userMapper;
     }
 
     @PostConstruct
@@ -24,12 +25,12 @@ public class CredentialService {
         System.out.println("Creating credentials bean.");
     }
 
-    public void addCredential(String URL, String username, String key, String password){
-        Integer userId = userService.getUser(username).getUserID();
-        Credentials credential = new Credentials(0, URL, username, key, password, userId);
+    public void addCredential(String URL, String username, String credentialUsername, String key, String password){
+        Integer userId = userMapper.getUser(username).getUserID();
+        Credentials credential = new Credentials(0, URL, credentialUsername, key, password, userId);
         credentialsMapper.insert(credential);
     }
-    public List<Credentials> getAllCredentials(Integer userId){
+    public Credentials[] getAllCredentials(Integer userId){
         return credentialsMapper.getAllCredentials(userId);
     }
 
@@ -40,8 +41,8 @@ public class CredentialService {
         credentialsMapper.delete(credentialId);
     }
 
-    public void updateCredential(String URL, String key, String password, String username, Integer credentialId){
-        credentialsMapper.updateCredential(URL, key, password, username, credentialId);
+    public void updateCredential(Integer credentialId, String newUserName, String url, String key, String password) {
+        credentialsMapper.updateCredential(credentialId, newUserName, url, key, password);
     }
 
 }

@@ -9,8 +9,8 @@ import org.springframework.boot.web.server.LocalServerPort;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class PersonalCloudStorageApplicationTests {
-	@LocalServerPort
 	public static WebDriver driver;
+	@LocalServerPort
 	protected int port;
 	public String baseUrl;
 
@@ -35,7 +35,7 @@ class PersonalCloudStorageApplicationTests {
 		Assertions.assertEquals("Login", driver.getTitle());
 	}
 
-	public void SignupTest(){
+	public HomePage SignupTest(){
 		String firstName = "Fredrick";
 		String lastname = "Li";
 		String username = "fl123";
@@ -45,11 +45,10 @@ class PersonalCloudStorageApplicationTests {
 		SignupPage signupPage = new SignupPage(driver);
 		signupPage.signUp(firstName, lastname, username, password);
 		driver.get(baseUrl + "/login");
-		LoginPage loginPage = new LoginPage();
+		LoginPage loginPage = new LoginPage(driver);
 		loginPage.login(username, password);
 
-		Assertions.assertEquals("Home", driver.getTitle());
-
+		return new HomePage(driver);
 
 	}
 
