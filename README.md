@@ -24,6 +24,7 @@
 
 
 
+![](https://github.com/Fredrick-Li/Fredrick-Li/blob/main/Fredrick_Banner.png)
 
 
 <!-- PROJECT LOGO -->
@@ -52,14 +53,14 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#languages-used">Languages Used</a></li>
       </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Download and Run Application</a></li>
+        <li><a href="#download-and-run-application">Download and Run Application</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
@@ -89,7 +90,7 @@ This project implements three layers of applications that enabels users to uploa
 
 
 
-### Languages Used
+## Languages Used
 
 * [Java](https://www.oracle.com/java/technologies/)
 * [HTML]()
@@ -120,6 +121,7 @@ If you want to try out this project locally, first clone this repository to your
 This is an example of how to list things you need to use the software and how to install them.
 * Make sure to have your IDE (e.g Intellij IDEA) installed.
 
+<!-- Download and Run Application -->
 ### Download and Run Application
 
 1.  Clone the repo
