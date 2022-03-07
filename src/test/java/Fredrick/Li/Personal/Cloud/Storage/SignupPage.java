@@ -9,7 +9,7 @@ public class SignupPage {
     @FindBy(id = "inputFirstName")
     private WebElement FirstNameField;
 
-    @FindBy(id = "inputFirstName")
+    @FindBy(id = "inputLastName")
     private WebElement LastNameField;
 
     @FindBy(id = "inputUsername")
