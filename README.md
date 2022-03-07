@@ -16,8 +16,10 @@
 <!-- [![Stargazers][stars-shield]][stars-url] -->
 <!-- [![Issues][issues-shield]][issues-url] -->
 <!-- [![MIT License][license-shield]][license-url] -->
-[![LinkedIn][linkedin-shield]][linkedin-url]
-![](https://img.shields.io/badge/Code-java-informational?style=flat&logo=react&color=61DAFB)
+<!-- [![LinkedIn][linkedin-shield]][linkedin-url] -->
+- ![](https://img.shields.io/badge/Code-java-informational?style=flat&logo=react&color=61DAFB)
+
+- ![](https://img.shields.io/badge/Code-Spring-informational?style=flat&logo=react&color=61DAFB)
 
 
 
@@ -57,7 +59,7 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#installation">Download and Run Application</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
@@ -69,6 +71,7 @@
   </ol>
 </details>
 
+<br />
 
 
 <!-- ABOUT THE PROJECT -->
@@ -76,61 +79,70 @@
 
 ![Application Preview](https://github.com/Fredrick-Li/Web-Storage-Application/blob/main/img/password.png)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+This project implements three layers of applications that enabels users to upload files, store/edit notes and website credentials.
+- The back-end service is built with [Spring Boot](https://spring.io/)
+- The font-end rendering realized with [Thymleaf](https://www.thymeleaf.org/)
+- Application user tests with [Selenium](https://www.selenium.dev/)
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
-### Built With
+### Languages Used
 
 * [Java](https://www.oracle.com/java/technologies/)
 * [HTML]()
-* [Spring Boot](https://spring.io/)
+<!-- * [Spring Boot](https://spring.io/)
 * [mybatis](https://mybatis.org/)
 * [Selenium](https://www.selenium.dev/)
-<!-- * [Next.js](https://nextjs.org/)
+* [Next.js](https://nextjs.org/)
 * [React.js](https://reactjs.org/)
 * [Vue.js](https://vuejs.org/)
 * [Angular](https://angular.io/)
 * [Svelte](https://svelte.dev/)
 * [Laravel](https://laravel.com)
 * [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com) -->
+* [JQuery](https://jquery.com)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">back to top</a>)</p> -->
 
+<br />
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+If you want to try out this project locally, first clone this repository to your lcoal machine and follow the instructions below.
 
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+* Make sure to have your IDE (e.g Intellij IDEA) installed.
 
-### Installation
+### Download and Run Application
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1.  Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/Fredrick-Li/Web-Storage-Application.git
    ```
-3. Install NPM packages
+2. Open the maven project in your IDE and run main class
+ ```sh
+   src -> main -> java -> PersonalCloudStorageApplication
+   ```
+3. In your browser enter login url and proceed to signup page
+ ```sh
+   http://localhost:8080/login
+   ```
+
+<!-- 3. Install NPM packages
    ```sh
    npm install
    ```
 4. Enter your API in `config.js`
    ```js
    const API_KEY = 'ENTER YOUR API';
-   ```
+   ``` -->
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -139,9 +151,10 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+This cloud storage application support registered users to store three types of data: 
+file, note, and website username/password. The users can perform basic operations on information stored in backend database such as "insert", "delete", and "modification", etc. All data uploaded will be displayed under their respective navigation bars.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+_For more examples, please refer to the [Documentation](https://github.com/Fredrick-Li/Web-Storage-Application)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -150,12 +163,19 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- Login Page
+- Signup Page
+- Home Page
+    - Logout
+    - File Upload
+    - File navigator/display
+        - View/Delete
+    - Note navigator/add new note
+        - Edit/Delete
+    - Credential navigator/display
+        - Edit/Delete
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/Fredrick-Li/Web-Storage-Application/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -170,9 +190,9 @@ If you have a suggestion that would make this better, please fork the repo and c
 Don't forget to give the project a star! Thanks again!
 
 1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
+2. Create your Feature Branch (`git checkout -b feature/Feature`)
+3. Commit your Changes (`git commit -m 'Add Feature'`)
+4. Push to the Branch (`git push origin feature/Feature`)
 5. Open a Pull Request
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -191,9 +211,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Fredrick Li - fredrick.li@nyu.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/Fredrick-Li/Web-Storage-Application](https://github.com/Fredrick-Li/Web-Storage-Application)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -202,9 +222,9 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
-* []()
+* Main static HTML template and database schema provided by Udacity starter package:
+[click here](https://github.com/udacity/nd035-c1-spring-boot-basics-project-starter/tree/master/starter/cloudstorage)
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
