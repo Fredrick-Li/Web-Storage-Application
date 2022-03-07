@@ -28,7 +28,6 @@
 
 
 <!-- PROJECT LOGO -->
-<br />
 <div align="center">
 <h2 align="center">Peronal Web Storage Application With Spring Boot</h2>
 
