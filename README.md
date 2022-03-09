@@ -117,7 +117,6 @@ If you want to try out this project locally, first clone this repository to your
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
 * Make sure to have your IDE (e.g Intellij IDEA) installed.
 
 <!-- Download and Run Application -->
